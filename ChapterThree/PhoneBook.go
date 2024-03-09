@@ -96,7 +96,7 @@ func list() {
 }
 
 func createIndex() error {
-	index := make(map[string]int)
+	index = make(map[string]int)
 	fmt.Println(data)
 	for i, k := range data {
 		key := k.Number
@@ -192,8 +192,6 @@ func main() {
 		return
 	}
 
-	fmt.Println(index)
-
 	arguments := os.Args
 	switch arguments[1] {
 	case "insert":
@@ -223,7 +221,7 @@ func main() {
 			fmt.Println("Usage: delete number")
 			return
 		}
-		t := strings.ReplaceAll(arguments[4], "-", "")
+		t := strings.ReplaceAll(arguments[2], "-", "")
 		if !matchTel(t) {
 			fmt.Println("Invalid number: ", t)
 			return
