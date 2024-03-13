@@ -141,6 +141,15 @@ func list() {
 	fmt.Println()
 }
 
+func reverseList() {
+	sort.Sort(sort.Reverse(PhoneBook(data)))
+	for _, v := range data {
+		fmt.Println(v)
+	}
+
+	fmt.Println()
+}
+
 func createIndex() error {
 	index = make(map[string]int)
 	fmt.Println(data)
@@ -299,6 +308,10 @@ func main() {
 	case "list":
 
 		list()
+
+	case "reverse":
+
+		reverseList()
 
 	default:
 		fmt.Println("Not a valid option")
