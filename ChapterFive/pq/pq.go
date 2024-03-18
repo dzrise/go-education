@@ -17,12 +17,12 @@ func main() {
 	}
 
 	host := arguments[1]
-	port := arguments[2]
+	p := arguments[2]
 	user := arguments[3]
 	password := arguments[4]
 	database := arguments[5]
 
-	port, err := strconv.Atoi(port)
+	port, err := strconv.Atoi(p)
 
 	if err != nil {
 		fmt.Println("Not a valid port:", err)
